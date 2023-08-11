@@ -21,5 +21,6 @@ for (n = '0'; n <= '9'; n++)
 		putchar(' ');
 }
 }
+	putchar('\n');
 	return (0);
 }
