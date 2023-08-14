@@ -13,13 +13,13 @@ int main(void)
 {
 	int x, y, a, b;
 
-	for (x = '0'; x <= '9'; x++)
+	for (x = 48; x <= 57; x++)
 	{
-		for (y = '0'; y <= '9'; y++)
+		for (y = 48; y <= 57; y++)
 		{
-			for (a = '0'; a <= '9'; a++)
+			for (a = 48; a <= 57; a++)
 			{
-				for (b = '1'; b <= '9'; b++)
+				for (b = 49; b <= 57; b++)
 				{
 					if (a == x && b == y)
 						break;
@@ -30,7 +30,7 @@ int main(void)
 					putchar(' ');
 					putchar(a);
 					putchar(b);
-					if (x == '9' && y == '9' && a == '9' && b == '8')
+					if (x == 57 && y == 57 && a == 57 && b == 56)
 						break;
 				else
 				{
