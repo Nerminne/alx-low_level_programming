@@ -21,9 +21,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-			
 				prod = m * x;
-
 				if (prod > 100)
 				{
 					_putchar((prod / 100) + '0');
@@ -42,7 +40,6 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 					_putchar((prod % 10) + '0');
-			
 				}
 			}
 			_putchar('\n');
