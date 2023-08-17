@@ -13,7 +13,7 @@ int main(void)
 	{
 		if ((n % 3) == 0)
 			printf("Fizz ");
-		else if ((n % 5) == 0 && n != 100)
+		else if ((n % 5) == 0 && (n != 100))
 			printf("Buzz ");
 		else if (n == 100)
 			printf("Buzz");
