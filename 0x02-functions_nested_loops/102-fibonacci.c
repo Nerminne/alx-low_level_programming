@@ -15,7 +15,7 @@ int main(void)
 	int f2 = 1;
 	int counter;
 
-	for (counter = 0; counter < 50; counter++)
+	for (counter = 0; counter <= 50; counter++)
 	{
 		f = f1 + f2;
 		printf("%u, ", f);
