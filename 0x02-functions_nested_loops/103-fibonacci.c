@@ -1,3 +1,10 @@
+/**
+ * main - Entry point
+ *
+ * Description : prints first even fibonacci numbers
+ *
+ * Return: Always (0) (Success)
+*/
 #include <stdio.h>
 
 /**
@@ -17,9 +24,9 @@ int main(void)
 	while (f2 < 4000000)
 	{
 		f = f1 + f2;
-			printf("%lu\n", f);
 		f1 = f2;
 		f2 = f;
 	}
+	printf("%lu\n", f);
 	return (0);
 }
