@@ -10,15 +10,15 @@
 
 int main(void)
 {
-	int f;
-	int f1 = -1;
-	int f2 = 1;
+	long int f;
+	long int f1 = -1;
+	long int f2 = 1;
 	int counter;
 
 	for (counter = 0; counter <= 50; counter++)
 	{
 		f = f1 + f2;
-		printf("%u, ", f);
+		printf("%lu, ", f);
 		f1 = f2;
 		f2 = f;
 	}
