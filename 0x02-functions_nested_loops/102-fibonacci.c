@@ -18,7 +18,10 @@ int main(void)
 	for (counter = 0; counter < 50; counter++)
 	{
 		f = f1 + f2;
-		printf("%lu, ", f);
+		if (counter == 49)
+			printf("%lu/n", f);
+		else
+			printf("%lu, ", f);
 		f1 = f2;
 		f2 = f;
 	}
