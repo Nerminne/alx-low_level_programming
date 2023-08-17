@@ -18,7 +18,7 @@ int main(void)
 	for (counter = 0; counter < 50; counter++)
 	{
 		f = f1 + f2;
-		printf("%d, ", f);
+		printf("%u, ", f);
 		f1 = f2;
 		f2 = f;
 	}
