@@ -19,7 +19,7 @@ int main(void)
 	{
 		f = f1 + f2;
 		if (counter == 49)
-			printf("%lu/n", f);
+			printf("%lu\n", f);
 		else
 			printf("%lu, ", f);
 		f1 = f2;
