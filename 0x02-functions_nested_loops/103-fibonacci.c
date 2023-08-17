@@ -15,6 +15,16 @@
  * Return: Always (0) (Success)
 */
 
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Description : prints first 50 fibonacci numbers
+ *
+ * Return: Always (0) (Success)
+*/
+
 int main(void)
 {
 	long int f;
@@ -24,9 +34,9 @@ int main(void)
 	while (f2 < 4000000)
 	{
 		f = f1 + f2;
+			printf("%lu\n", f);
 		f1 = f2;
 		f2 = f;
 	}
-	printf("%lu\n", f);
 	return (0);
 }
