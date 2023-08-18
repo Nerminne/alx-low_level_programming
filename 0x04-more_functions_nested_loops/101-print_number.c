@@ -7,19 +7,16 @@
  */
 void print_number(int n)
 {
-	int tens;
+	unsigned int num = n;
 
-	for (tens = 10; ; tens *= 10)
+	if (n < 0)
 	{
-		if (((n / tens) <= 9 && (n / tens) != 0)
-				|| ((n / tens) <= -9 && (n / tens) != 0))
-			break;
+		_putchar('-');
+		num = -num;
 	}
-	for (; tens > 10; tens /= 10)
-	{
-		_putchar((n / tens) + '0');
-		n = (n - ((n / tens) * tens));
-	}
-	_putchar((n / tens) + '0');
-	_putchar((n % tens) + '0');
+
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }
