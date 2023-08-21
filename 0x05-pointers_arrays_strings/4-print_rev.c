@@ -12,7 +12,7 @@ void print_rev(char *s)
 		s++;
 		lenght++;
 	}
-	lenght++;
+	s--;
 	while (lenght != 0)
 	{
 		_putchar(*s);
