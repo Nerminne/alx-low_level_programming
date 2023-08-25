@@ -16,7 +16,7 @@ char *rot13(char *s)
 		for (x = 0; ch1[x] != '\0'; x++)
 		{
 			if (s[i] == ch1[x])
-				s[i] = rot[x];
+				(char)s[i] = rot[x];
 		}
 	}
 	return (s);
