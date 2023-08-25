@@ -1,22 +1,31 @@
 #include "main.h"
 /**
-* print_number - print int
-* @n: integer 
-*/
+ * print_number - print an integer
+ * @n: integer to be printed
+ * Return: encoded string
+ */
 void print_number(int n)
 {
-	unsigned int n1;
-
-	n1 = n;
+	int i;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n1 = -n;
+		n = -n;
 	}
-	if (n1 / 10 != 0)
+	for (i = 10; ; i *= 10)
 	{
-	print_number(n1 / 10);
+		if (n < i)
+			break;
 	}
-	_putchar((n1 % 10) + '0');
+	i /= 10;
+	while (i > 10)
+	{
+		_putchar((n / i) + '0');
+		n = n - ((n / i) * i);
+		i /= 10;
+	}
+		_putchar((n / i) + '0');
+	if (n != 0)
+		_putchar((n % i) + '0');
 }
