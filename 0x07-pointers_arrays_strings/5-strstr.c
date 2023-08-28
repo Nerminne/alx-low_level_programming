@@ -3,7 +3,7 @@
 /**
  * _strstr - function that locates a substring.
  * @haystack: pointer to string
- * @needlet: set of bytes
+ * @needle: set of bytes
  * Return: a pointer to the beginning of the located substring
  */
 char *_strstr(char *haystack, char *needle)
@@ -12,10 +12,11 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (x = 0; needle[x] != '\0' && 
+		for (x = 0; needle[x] != '\0' &&
 				needle[x] == haystack[i + x]; x++)
 		{
-				return(&haystack[i - x]);
+			if (needle[x + 1] == '\0')
+				return (&haystack[i]);
 		}
 	}
 	return (NULL);
