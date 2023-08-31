@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * guess_root - check root for num

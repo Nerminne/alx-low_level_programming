@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * prime_or_not - check if numb is prime factor
