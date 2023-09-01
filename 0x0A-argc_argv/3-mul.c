@@ -7,7 +7,7 @@
  * @argv: argument vector, pointer to array of arguments
  * Return: Always (0) (Success)
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{                 
