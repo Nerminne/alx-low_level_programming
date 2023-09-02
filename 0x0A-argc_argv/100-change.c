@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
 			{
 				cents -= 1;
 			}
-			printf("%d\n", change);        
+			printf("%d\n", change);
 		}
 		else
-			printf ("0\n");
+			printf("0\n");
 	}
 	else
 	{
