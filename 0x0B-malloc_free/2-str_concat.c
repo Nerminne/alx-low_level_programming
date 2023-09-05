@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 	char *concat_str;
 	unsigned long int x = 0, i = 0;
 
-	concat_str = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 2));
+	concat_str = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
 	if (concat_str == NULL)
 		return (NULL);
 	while (i < strlen(s1))
