@@ -15,12 +15,16 @@ char *str_concat(char *s1, char *s2)
 	concat_str = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
 	if (concat_str == NULL)
 		return (NULL);
-	while (i < strlen(s1))
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[x])
 	{
 		concat_str[i] = s1[i];
 		i++;
 	}
-	while (x <= strlen(s2))
+	while (s2[x])
 	{
 		concat_str[i] = s2[x];
 		x++;
