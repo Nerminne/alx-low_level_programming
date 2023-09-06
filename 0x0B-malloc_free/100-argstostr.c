@@ -4,7 +4,7 @@
 /**
  * argstostr - unction that concatenates all
  * the arguments of your program.
- * @ac: argument count 
+ * @ac: argument count
  * @av: argument vector
  * Return: pointer to array
  */
