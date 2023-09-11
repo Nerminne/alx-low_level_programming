@@ -2,7 +2,7 @@
 #define DOG_H
 
 /*
- * file dog.h contain definition of new type struct for dogs 
+ * file dog.h contain definition of new type struct for dogs
  * and prototype of all function that
  * will used in this directory
  */
