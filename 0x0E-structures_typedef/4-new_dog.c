@@ -30,9 +30,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_poppy);
 		return (NULL);
 	}
-	while (len1--)
-		(*name_copy++) = (*name);
-	new_poppy->name = name_copy;
+	new_poppy->name = strcpy(name_copy, name);
 
 	len2 = strlen(owner);
 	len2++;
@@ -43,10 +41,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_poppy);
 		return (NULL);
 	}
-	while (len2--)
-		(*owner_copy++) = (*owner++);
-	new_poppy->owner = owner_copy;
-	new_poppy->age = age;
-
+	new_poppy->owner = strcpy(owner_copy, owner);
 	return (new_poppy);
 }
