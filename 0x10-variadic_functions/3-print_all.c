@@ -11,33 +11,33 @@ void print_all(const char * const format, ...)
 {
 	unsigned long int i = 0;
 	va_list args;
-	char *s, *separator = ", ";
+	char *s;
 
 	va_start(args, format);
 	while (i < strlen(format) && format != NULL)
 	{
-		if (i == strlen(format) - 1)
-			separator = "";
 		switch (format[i])
 			{
 			case 'c':
-				printf("%c%s", va_arg(args, int), separator);
+				printf("%c", va_arg(args, int));
 				break;
 			case 'i':
-				printf("%d%s", va_arg(args, int), separator);
+				printf("%d", va_arg(args, int));
 				break;
 			case 'f':
-				printf("%f%s", va_arg(args, double), separator);
+				printf("%f", va_arg(args, double));
 				break;
 			case 's':
 				s = va_arg(args, char *);
 				if (s == NULL)
 					s = "(nil)";
-				printf("%s%s", s, separator);
+				printf("%s", s);
 				break;
 			default:
 				break;
 		}
+		if (i != (strlen(format) - 1))
+			printf(", ");
 		i++;
 	}
 	printf("\n");
