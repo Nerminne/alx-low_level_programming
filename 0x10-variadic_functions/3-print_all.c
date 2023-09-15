@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (i < strlen(format))
 	{
-		if (i == strlen(format) - 1)
+		if (i == strlen(format) + 1)
 			separator = "";
 		switch (format[i])
 			{
