@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	while (i < strlen(format) && format != NULL)
 	{
 		if (i == strlen(format) - 1)
-			separator = NULL;
+			separator = "";
 		switch (format[i])
 			{
 			case 'c':
