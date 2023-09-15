@@ -1,6 +1,6 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
-
+#include <stdlib.h>
 /*
  * file function_pointers.h contain prototype of
  * all function that will used in this directory
