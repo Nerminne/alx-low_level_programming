@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <string.h>
 #include "variadic_functions.h"
 /**
  * print_all - function that print anything
@@ -9,13 +8,14 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned long int i = 0;
+	int i = 0, flag;
 	va_list args;
 	char *s;
 
 	va_start(args, format);
-	while (i < strlen(format) && format != NULL)
+	while (format[i] && format)
 	{
+		flag = 0;
 		switch (format[i])
 			{
 			case 'c':
@@ -34,10 +34,10 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 				break;
 			default:
-				i++;
-				continue;
+				flag = 1;
+				break;
 		}
-		if (i != (strlen(format) - 1))
+		if (format[i + 1] != '\0' && flag == 0)
 			printf(", ");
 		i++;
 	}
