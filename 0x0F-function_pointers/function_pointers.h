@@ -1,8 +1,6 @@
-#include <stddef.h>
-
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
-
+#include <stddef.h>
 
 /*
  * file function_pointers.h contain prototype of
