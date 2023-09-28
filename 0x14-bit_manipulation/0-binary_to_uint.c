@@ -16,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	i = (int)strlen(b) - 1;
 	while (i >= 0)
 	{
-		if (b[i] != '1' || b[i] != '0')
+		if (b[i] != '1' && b[i] != '0')
 			return (0);
 		if (b[i] == '1')
 			decimal += weight;
