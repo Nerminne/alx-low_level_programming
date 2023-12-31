@@ -16,10 +16,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash = malloc(sizeof(hash_table_t));
 	if (hash == NULL)
 		return (NULL);
-	hash_arr = malloc(sizeof(hash_node_t) * size);
+	hash_arr = malloc(sizeof(hash_node_t *) * size);
 	if (hash_arr == NULL)
 	{
-		/*free(hash);*/
+		free(hash);
 		return (NULL);
 	}
 	for (i = 0; i < size; i++)
